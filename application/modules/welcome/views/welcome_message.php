@@ -1,0 +1,574 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>LMS Admin Panel</title>
+
+    <!-- using online links -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/');?>fontawesome-free-5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/jquery.mCustomScrollbar.min.css">
+
+    <!-- using local links -->
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"> -->
+
+    <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/sidebar-themes.css">
+    <!--<link rel="shortcut icon" type="image/png" href="img/favicon.png" />-->
+    <style>
+        .nav-item .nav-link, .navbar-brand, .breadcrumb-item a{
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
+
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <!-- sidebar-brand  -->
+                <div class="sidebar-item sidebar-brand">
+                    <a href="#"><?php echo APP_NAME;?></a>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-item sidebar-header d-flex flex-nowrap">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="<?php echo base_url('assets/');?>img/user.jpg" alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Username
+                            <strong>Name</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-item sidebar-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar-menu  -->
+                <div class=" sidebar-item sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span class="menu-text">Dashboard</span>
+                                <span class="badge badge-pill badge-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Dashboard 1
+                                            <span class="badge badge-pill badge-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="menu-text">E-commerce</span>
+                                <span class="badge badge-pill badge-danger">3</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Products
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Credit cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span class="menu-text">Components</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">General</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Panels</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Forms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-chart-line"></i>
+                                <span class="menu-text">Charts</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Pie chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Line chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bar chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Histogram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span class="menu-text">Maps</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Google maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Open street map</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span class="menu-text">Documentation</span>
+                                <span class="badge badge-pill badge-primary">Beta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                <span class="menu-text">Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-folder"></i>
+                                <span class="menu-text">Examples</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-footer  -->
+            <div class="sidebar-footer">
+                <div class="dropdown">
+
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-pill badge-warning notification">3</span>
+                    </a>
+                    <div class="dropdown-menu notifications" aria-labelledby="dropdownMenuMessage">
+                        <div class="notifications-header">
+                            <i class="fa fa-bell"></i>
+                            Notifications
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-check text-success border border-success"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                    <div class="notification-time">
+                                        6 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation text-info border border-info"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                    <div class="notification-time">
+                                        Today
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="notification-content">
+                                <div class="icon">
+                                    <i class="fas fa-exclamation-triangle text-warning border border-warning"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                    <div class="notification-time">
+                                        Yesterday
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-center" href="#">View all notifications</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-envelope"></i>
+                        <span class="badge badge-pill badge-success notification">7</span>
+                    </a>
+                    <div class="dropdown-menu messages" aria-labelledby="dropdownMenuMessage">
+                        <div class="messages-header">
+                            <i class="fa fa-envelope"></i>
+                            Messages
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <div class="message-content">
+                                <div class="pic">
+                                    <img src="img/user.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="message-title">
+                                        <strong> Jhon doe</strong>
+                                    </div>
+                                    <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                </div>
+                            </div>
+
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="message-content">
+                                <div class="pic">
+                                    <img src="img/user.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="message-title">
+                                        <strong> Jhon doe</strong>
+                                    </div>
+                                    <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                </div>
+                            </div>
+
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="message-content">
+                                <div class="pic">
+                                    <img src="img/user.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="message-title">
+                                        <strong> Jhon doe</strong>
+                                    </div>
+                                    <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. In totam explicabo</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-center" href="#">View all messages</a>
+
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cog"></i>
+                        <span class="badge-sonar"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <a class="dropdown-item" href="#">Setting</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-image"></i>
+                            <span class="badge-sonar"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+
+                                <a href="#" data-bg="bg1" class="dropdown-item theme theme-bg selected"></a>
+                                <a href="#" data-bg="bg2" class="dropdown-item theme theme-bg"></a>
+                                <a href="#" data-bg="bg3" class="dropdown-item theme theme-bg"></a>
+                                <a href="#" data-bg="bg4" class="dropdown-item theme theme-bg"></a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-palette"></i>
+                            <span class="badge-sonar"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+
+                                <a href="#" data-theme="default-theme" class="dropdown-item theme default-theme selected"></a>
+                                <a href="#" data-theme="chiller-theme" class="dropdown-item theme chiller-theme"></a>
+                                <a href="#" data-theme="legacy-theme" class="dropdown-item theme legacy-theme"></a>
+                                <a href="#" data-theme="ice-theme" class="dropdown-item theme ice-theme"></a>
+                                <a href="#" data-theme="cool-theme" class="dropdown-item theme cool-theme"></a>
+                                <a href="#" data-theme="light-theme" class="dropdown-item theme light-theme"></a>
+
+                        </div>
+                    </div>
+                <div>
+                    <a href="#">
+                        <i class="fa fa-power-off"></i>
+                    </a>
+                </div>
+                <div class="pinned-footer">
+                    <a href="#">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- page-content  -->
+        <main class="page-content">
+                <header>
+                        <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #252627;">
+                                <a  class="navbar-brand" href="#">
+                                    <span id="toggle-sidebar"><span class="fa fa-bars"></span> <?php echo APP_SRT_NAME;?></span>
+
+                                </a>
+                                <button style="background-color: #ffffff !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                  <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                      <a class="nav-link" href="#">
+                                          <span class="fa fa-tachometer-alt"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#"><span class="fa fa-comments"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#"><span id="pin-sidebar"><i class="fas fa-thumbtack"></i></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#"><span class="fa fa-sign-out-alt"></span></a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </nav>
+                              <nav aria-label="breadcrumb" style="border-top: 1px solid #6c757d;">
+                                    <ol class="breadcrumb rounded-0" style="background-color: #252627 !important;">
+                                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                    </ol>
+                                  </nav>
+                </header>
+            <div id="overlay" class="overlay"></div>
+            <div class="container-fluid p-5">
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                            <canvas id="canvas"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+            <footer id="footer" class="footer p-4 text-center bg-dark" style="color: #ffffff;">
+                    Copyright &copy; 2018 - <?php echo date('y');?>. <?php echo APP_NAME;?> All Rights Reserve
+            </footer>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+
+    <!-- using online scripts -->
+    <script src="<?php echo base_url('assets/');?>js/jquery.min.js"></script>
+    <script src="<?php echo base_url('assets/');?>js/popper.min.js"></script>
+    <script src="<?php echo base_url('assets/');?>js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url('assets/');?>js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script>
+            var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var color = Chart.helpers.color;
+            var barChartData = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Dataset 2',
+                    backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+                    borderColor: window.chartColors.blue,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+
+            };
+
+            window.onload = function() {
+                var ctx = document.getElementById('canvas').getContext('2d');
+                window.myBar = new Chart(ctx, {
+                    type: 'bar',
+                    data: barChartData,
+                    options: {
+                        responsive: true,
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Leads Conversion Chart'
+                        }
+                    }
+                });
+
+            };
+
+            document.getElementById('randomizeData').addEventListener('click', function() {
+                var zero = Math.random() < 0.2 ? true : false;
+                barChartData.datasets.forEach(function(dataset) {
+                    dataset.data = dataset.data.map(function() {
+                        return zero ? 0.0 : randomScalingFactor();
+                    });
+
+                });
+                window.myBar.update();
+            });
+
+            var colorNames = Object.keys(window.chartColors);
+            document.getElementById('addDataset').addEventListener('click', function() {
+                var colorName = colorNames[barChartData.datasets.length % colorNames.length];
+                var dsColor = window.chartColors[colorName];
+                var newDataset = {
+                    label: 'Dataset ' + (barChartData.datasets.length + 1),
+                    backgroundColor: color(dsColor).alpha(0.5).rgbString(),
+                    borderColor: dsColor,
+                    borderWidth: 1,
+                    data: []
+                };
+
+                for (var index = 0; index < barChartData.labels.length; ++index) {
+                    newDataset.data.push(randomScalingFactor());
+                }
+
+                barChartData.datasets.push(newDataset);
+                window.myBar.update();
+            });
+
+            document.getElementById('addData').addEventListener('click', function() {
+                if (barChartData.datasets.length > 0) {
+                    var month = MONTHS[barChartData.labels.length % MONTHS.length];
+                    barChartData.labels.push(month);
+
+                    for (var index = 0; index < barChartData.datasets.length; ++index) {
+                        // window.myBar.addData(randomScalingFactor(), index);
+                        barChartData.datasets[index].data.push(randomScalingFactor());
+                    }
+
+                    window.myBar.update();
+                }
+            });
+
+            document.getElementById('removeDataset').addEventListener('click', function() {
+                barChartData.datasets.pop();
+                window.myBar.update();
+            });
+
+            document.getElementById('removeData').addEventListener('click', function() {
+                barChartData.labels.splice(-1, 1); // remove the label first
+
+                barChartData.datasets.forEach(function(dataset) {
+                    dataset.data.pop();
+                });
+
+                window.myBar.update();
+            });
+        </script>
+    <!-- using local scripts -->
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+
+    <script src="<?php echo base_url('assets/');?>js/main.js"></script>
+</body>
+
+</html>
