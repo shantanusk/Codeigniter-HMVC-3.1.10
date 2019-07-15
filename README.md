@@ -9,6 +9,8 @@ Library Used
 3. mCustomScrollbar v3.1.13
 4. Sidebar-Themes Pro
 5. HMVC Modules Updated On 2019‑06‑25
+6. TCPDF v6.2.26
+7. Phpspreadsheet v1.8.2
 
 *******************
 What is CodeIgniter

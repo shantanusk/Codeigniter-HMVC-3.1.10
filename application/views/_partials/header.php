@@ -8,17 +8,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>LMS Admin Panel</title>
+    <title><?php echo $title;?></title>
 
     <!-- using online links -->
     <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/');?>fontawesome-free-5.8.2/css/all.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/jquery.mCustomScrollbar.min.css">
 
-    <!-- using local links -->
-    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"> -->
 
     <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/main.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/');?>css/sidebar-themes.css">
@@ -28,6 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             color: #ffffff !important;
         }
     </style>
+    <script src="<?php echo base_url('assets/');?>js/jquery.min.js"></script>
+    <script src="<?php echo base_url('assets/');?>js/popper.min.js"></script>
+    <script src="<?php echo base_url('assets/');?>js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
