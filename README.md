@@ -2,6 +2,15 @@
 Codeigniter HMVC 3.1.10 With Pro Sidebar Templates
 
 *******************
+Library Used
+*******************
+1. Bootstrap v4.2.1
+2. jQuery v3.3.1
+3. mCustomScrollbar v3.1.13
+4. Sidebar-Themes Pro
+5. HMVC Modules Updated On 2019‑06‑25
+
+*******************
 What is CodeIgniter
 *******************
 
